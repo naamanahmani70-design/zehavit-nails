@@ -30,14 +30,27 @@
 <section id="services" class="wrap">
   <h2>הטיפולים שלי</h2>
   <div class="cards">
-    <article class="card"><h3>בניית ציפורניים בג'ל</h3><p>מראה טבעי, קל וגמיש.</p><b>מ-<span data-price="gel"></span> ₪</b></article>
-    <article class="card"><h3>בניית אקריל</h3><p>חוזק מקסימלי לאורך זמן.</p><b>מ-<span data-price="acrylic"></span> ₪</b></article>
-    <article class="card"><h3>בניית פולי-ג'ל</h3><p>שילוב של חוזק וקלילות.</p><b>מ-<span data-price="polygel"></span> ₪</b></article>
-    <article class="card"><h3>מילוי ותחזוקה</h3><p>רענון לבנייה קיימת.</p><b>מ-<span data-price="fill"></span> ₪</b></article>
-    <article class="card"><h3>מניקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="manicure"></span> ₪</b></article>
-    <article class="card"><h3>פדיקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="pedicure"></span> ₪</b></article>
+    <article class="card" id="t-gel"><div class="art" data-art="gel"></div><h3>בניית ציפורניים בג'ל</h3><p>מראה טבעי, קל וגמיש.</p><b>מ-<span data-price="gel"></span> ₪</b></article>
+    <article class="card" id="t-acrylic"><div class="art" data-art="acrylic"></div><h3>בניית אקריל</h3><p>חוזק מקסימלי לאורך זמן.</p><b>מ-<span data-price="acrylic"></span> ₪</b></article>
+    <article class="card" id="t-polygel"><div class="art" data-art="polygel"></div><h3>בניית פולי-ג'ל</h3><p>שילוב של חוזק וקלילות.</p><b>מ-<span data-price="polygel"></span> ₪</b></article>
+    <article class="card" id="t-fill"><div class="art" data-art="fill"></div><h3>מילוי ותחזוקה</h3><p>רענון לבנייה קיימת.</p><b>מ-<span data-price="fill"></span> ₪</b></article>
+    <article class="card" id="t-manicure"><div class="art" data-art="manicure"></div><h3>מניקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="manicure"></span> ₪</b></article>
+    <article class="card" id="t-pedicure"><div class="art" data-art="pedicure"></div><h3>פדיקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="pedicure"></span> ₪</b></article>
   </div>
 </section>
+
+<section id="gallery" class="wrap">
+  <h2>גלריית עיצובים</h2>
+  <div class="gallery" id="galleryGrid"></div>
+  <p class="note">איורים להמחשה – תמונות העבודות האמיתיות של זהבית יתווספו כאן.</p>
+</section>
+
+<nav class="agents" aria-label="קיצורי דרך לטיפולים">
+  <a class="agent a1" href="#t-manicure"><span>💅</span><em>מניקור</em></a>
+  <a class="agent a2" href="#t-pedicure"><span>🦶</span><em>פדיקור</em></a>
+  <a class="agent a3" href="#t-gel"><span>✨</span><em>בניית ג'ל</em></a>
+  <a class="agent a4" href="#t-acrylic"><span>💎</span><em>אקריל</em></a>
+</nav>
 
 <section id="about" class="wrap about">
   <h2>קצת עליי</h2>
@@ -76,6 +89,7 @@
 </section>
 
 <footer>© זהבית – סטודיו לציפורניים</footer>
+<script src="art.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

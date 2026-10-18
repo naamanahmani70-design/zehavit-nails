@@ -32,3 +32,23 @@ input,select{padding:10px 12px;border:1px solid #e3c5d0;border-radius:10px;font:
 .contact{text-align:center}
 .hours{list-style:none;padding:0}
 footer{text-align:center;padding:24px;background:var(--ink);color:#fff}
+.art svg{width:100%;height:auto;display:block;margin-bottom:12px;border-radius:14px}
+.card:target{outline:3px solid var(--rose)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.gallery figure{margin:0}
+.gallery svg{width:100%;height:auto;display:block;border-radius:14px}
+.gallery figcaption{text-align:center;font-weight:600;margin-top:6px}
+.note{text-align:center;color:#8a7a80;font-size:.9rem}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+.agents{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:hidden}
+.agent{position:absolute;display:flex;align-items:center;gap:6px;padding:6px 14px 6px 8px;border-radius:99px;background:#fff;border:2px solid var(--rose);box-shadow:0 6px 18px #c9567a40;text-decoration:none;color:var(--ink);pointer-events:auto;animation:drift 22s linear infinite alternate}
+.agent span{font-size:1.5rem;animation:bob 1.2s ease-in-out infinite}
+.agent em{font-style:normal;font-weight:600;font-size:.85rem;white-space:nowrap}
+.agent:hover{animation-play-state:paused;background:var(--blush)}
+.a1{top:18%;animation-duration:24s}
+.a2{top:42%;animation-duration:30s;animation-delay:-8s}
+.a3{top:64%;animation-duration:26s;animation-delay:-15s}
+.a4{top:82%;animation-duration:34s;animation-delay:-4s}
+@keyframes drift{from{right:2%}to{right:calc(98% - 130px)}}
+@keyframes bob{50%{transform:translateY(-5px) rotate(8deg)}}
+@media (prefers-reduced-motion:reduce){.agent,.agent span{animation:none}.a1{right:3%}.a2{right:3%}.a3{right:3%}.a4{right:3%}}
