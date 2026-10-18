@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>זהבית | סטודיו לציפורניים</title>
+<meta name="description" content="זהבית - בניית ציפורניים בג'ל, אקריל ופולי-ג'ל, מניקור ופדיקור. קבעו תור אונליין.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#">זהבית <span>nails</span></a>
+  <nav>
+    <a href="#services">טיפולים</a>
+    <a href="#about">אודות</a>
+    <a href="#booking">קביעת תור</a>
+    <a href="#contact">צור קשר</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">סטודיו לציפורניים</p>
+    <h1>ציפורניים יפות<br>מתחילות כאן</h1>
+    <p>בניית ציפורניים בכל השיטות, מניקור ופדיקור – בקשב, בדיוק ובאהבה.</p>
+    <a class="btn" href="#booking">קבעו תור</a>
+  </div>
+</section>
+
+<section id="services" class="wrap">
+  <h2>הטיפולים שלי</h2>
+  <div class="cards">
+    <article class="card"><h3>בניית ציפורניים בג'ל</h3><p>מראה טבעי, קל וגמיש.</p><b>מ-<span data-price="gel"></span> ₪</b></article>
+    <article class="card"><h3>בניית אקריל</h3><p>חוזק מקסימלי לאורך זמן.</p><b>מ-<span data-price="acrylic"></span> ₪</b></article>
+    <article class="card"><h3>בניית פולי-ג'ל</h3><p>שילוב של חוזק וקלילות.</p><b>מ-<span data-price="polygel"></span> ₪</b></article>
+    <article class="card"><h3>מילוי ותחזוקה</h3><p>רענון לבנייה קיימת.</p><b>מ-<span data-price="fill"></span> ₪</b></article>
+    <article class="card"><h3>מניקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="manicure"></span> ₪</b></article>
+    <article class="card"><h3>פדיקור</h3><p>רגיל או בלק ג'ל.</p><b>מ-<span data-price="pedicure"></span> ₪</b></article>
+  </div>
+</section>
+
+<section id="about" class="wrap about">
+  <h2>קצת עליי</h2>
+  <p>אני זהבית, בונה ציפורניים ומתמחה במגוון שיטות בנייה, מניקור ופדיקור. כל טיפול מותאם אישית לצורת היד, לסגנון ולאורח החיים שלך – כדי שתצאי עם תוצאה מדויקת, נקייה ועמידה.</p>
+</section>
+
+<section id="booking" class="wrap">
+  <h2>קביעת תור</h2>
+  <form id="bookForm" class="book">
+    <label>סוג טיפול
+      <select id="service" required></select>
+    </label>
+    <label>תאריך
+      <input type="date" id="date" required>
+    </label>
+    <div>
+      <span class="lbl">שעה פנויה</span>
+      <div id="slots" class="slots" aria-live="polite">בחרו טיפול ותאריך</div>
+    </div>
+    <label>שם מלא <input id="name" required autocomplete="name"></label>
+    <label>טלפון <input id="phone" type="tel" required autocomplete="tel" pattern="[0-9\-+ ]{9,}"></label>
+    <p id="summary" class="summary"></p>
+    <button class="btn" type="submit">שלחו בקשה בוואטסאפ</button>
+    <small>הבקשה נשלחת לזהבית בוואטסאפ והתור מאושר לאחר אישור ממנה.</small>
+  </form>
+</section>
+
+<section id="contact" class="wrap contact">
+  <h2>צור קשר</h2>
+  <p><a href="tel:0525622662">052-5622662</a> · <a href="https://wa.me/972525622662">וואטסאפ</a></p>
+  <ul class="hours">
+    <li>ימים א׳–ה׳: 09:00–21:00</li>
+    <li>יום ו׳: 09:00–14:00</li>
+    <li>שבת: סגור</li>
+  </ul>
+</section>
+
+<footer>© זהבית – סטודיו לציפורניים</footer>
+<script src="script.js"></script>
+</body>
+</html>

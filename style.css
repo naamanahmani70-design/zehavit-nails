@@ -1,0 +1,34 @@
+:root{--rose:#c9567a;--rose-d:#a63f61;--blush:#fdf0f4;--ink:#2b2226;--gold:#c9a45c}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Heebo","Assistant",system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{color:var(--rose-d)}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 5vw;background:#fffffff2;backdrop-filter:blur(6px);border-bottom:1px solid #f0dde4}
+.logo{font-size:1.5rem;font-weight:700;text-decoration:none;color:var(--rose-d)}
+.logo span{color:var(--gold);font-weight:400}
+nav{display:flex;gap:18px}
+nav a{text-decoration:none;color:var(--ink)}
+nav a:hover{color:var(--rose)}
+.hero{display:grid;place-items:center;text-align:center;min-height:70vh;padding:60px 5vw;background:linear-gradient(135deg,#fde4ec,#f7d4e0 50%,#f3e3c8)}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.15;margin:.2em 0}
+.eyebrow{letter-spacing:.15em;color:var(--rose-d);font-weight:600}
+.btn{display:inline-block;margin-top:14px;padding:12px 30px;border:0;border-radius:99px;background:var(--rose);color:#fff;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--rose-d)}
+.wrap{max-width:960px;margin:0 auto;padding:60px 5vw}
+h2{text-align:center;font-size:2rem;margin:0 0 28px;color:var(--rose-d)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{background:var(--blush);border-radius:16px;padding:22px}
+.card h3{margin:0 0 6px}
+.card p{margin:0 0 10px}
+.card b{color:var(--rose-d)}
+.about{text-align:center;max-width:700px}
+.book{display:grid;gap:16px;max-width:520px;margin:auto;background:var(--blush);padding:26px;border-radius:18px}
+label,.lbl{display:grid;gap:6px;font-weight:600}
+input,select{padding:10px 12px;border:1px solid #e3c5d0;border-radius:10px;font:inherit;background:#fff}
+.slots{display:flex;flex-wrap:wrap;gap:8px;font-weight:400}
+.slot{padding:8px 14px;border:1px solid var(--rose);border-radius:99px;background:#fff;color:var(--rose-d);font:inherit;cursor:pointer}
+.slot.on{background:var(--rose);color:#fff}
+.slot:disabled{border-color:#ddd;color:#bbb;text-decoration:line-through;cursor:not-allowed}
+.summary{margin:0;font-weight:600;color:var(--rose-d)}
+.contact{text-align:center}
+.hours{list-style:none;padding:0}
+footer{text-align:center;padding:24px;background:var(--ink);color:#fff}
