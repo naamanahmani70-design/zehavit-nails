@@ -1,5 +1,5 @@
 // ===== הגדרות (אפשר לעדכן כאן מחירים, משכי זמן ושעות) =====
-const WHATSAPP = "972525622662";
+const WHATSAPP = "972507434526";
 const SERVICES = {
   gel:      { name: "בניית ג'ל",       price: 220, mins: 120 },
   acrylic:  { name: "בניית אקריל",     price: 250, mins: 150 },
