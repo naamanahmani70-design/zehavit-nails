@@ -82,7 +82,18 @@ const ART = {
   manicure: () => handSVG(five(PAL.coral), "round", "#fff", BG.coral),
   pedicure: () => toesSVG(PAL.pink, "#fff", BG.teal),
 };
-document.querySelectorAll("[data-art]").forEach(el => el.innerHTML = ART[el.dataset.art]());
+// תמונות אמיתיות של זהבית (אם אין תמונה לטיפול – איור)
+const PHOTOS = {
+  gel:      ["images/pearl-pink.jpg",   "בניית ג'ל בוורוד פנינה"],
+  acrylic:  ["images/green-almond.jpg", "ציפורניים ירוק כהה בצורת שקד"],
+  polygel:  ["images/neon.jpg",         "ציפורניים בצבעי ניאון"],
+  fill:     ["images/starfish.jpg",     "ציפורניים עם עיטורי כוכב ים"],
+  manicure: ["images/blue-dots.jpg",    "מניקור כחול עם נקודות"],
+};
+document.querySelectorAll("[data-art]").forEach(el => {
+  const p = PHOTOS[el.dataset.art];
+  el.innerHTML = p ? `<img src="${p[0]}" alt="${p[1]}" loading="lazy">` : ART[el.dataset.art]();
+});
 
 const CHARS = {
   heroA: { hair: "#3b1d5a", top: PAL.pink,   bg: BG.pink,  nail: PAL.sun,    label: "זהבית" },
@@ -92,15 +103,16 @@ const CHARS = {
 };
 document.querySelectorAll("[data-char]").forEach(el => el.innerHTML = characterSVG(CHARS[el.dataset.char]));
 
+const photo = (src, alt) => () => `<img src="${src}" alt="${alt}" loading="lazy">`;
 const DESIGNS = [
-  ["ורוד פופ",       () => handSVG(five(PAL.pink), "coffin", "#fff", BG.pink)],
-  ["לילך וזהב",      () => handSVG([PAL.lilac, "#e9dcff", PAL.lilac, "#e9dcff", PAL.lilac], "square", PAL.sun, BG.lilac)],
-  ["טורקיז קיצי",    () => handSVG(five(PAL.teal), "almond", "#fff", BG.teal)],
-  ["אדום יין",       () => handSVG(five("#a0153a"), "almond", null, BG.coral)],
-  ["שמש וכתום",      () => handSVG([PAL.sun, PAL.coral, PAL.sun, PAL.coral, PAL.sun], "round", "#fff", BG.sun)],
-  ["תכלת שמיים",     () => handSVG(five(PAL.sky), "coffin", "#fff", BG.sky)],
-  ["פדיקור פוקסיה",  () => toesSVG(PAL.pink, "#fff", BG.lilac)],
-  ["פדיקור מנטה",    () => toesSVG(PAL.mint, PAL.purple, BG.sun)],
+  ["פרפר ואומברה",    photo("images/butterfly.jpg", "ציפורניים ורודות עם ציור פרפר")],
+  ["ירוק כהה",        photo("images/green-almond.jpg", "ציפורניים ירוק כהה")],
+  ["כוכבי ים",        photo("images/starfish.jpg", "ציפורניים עם כוכבי ים")],
+  ["ניאון מנוקד",     photo("images/neon.jpg", "ציפורניים בצבעי ניאון")],
+  ["כחול ונקודות",    photo("images/blue-dots.jpg", "צרפתי כחול עם נקודות ורודות")],
+  ["ורוד פנינה",      photo("images/pearl-pink.jpg", "ציפורניים ורודות פנינה")],
+  ["פדיקור פוקסיה",   () => toesSVG(PAL.pink, "#fff", BG.lilac)],
+  ["פדיקור מנטה",     () => toesSVG(PAL.mint, PAL.purple, BG.sun)],
 ];
 document.getElementById("galleryGrid").innerHTML =
   DESIGNS.map(([t, f]) => `<figure>${f()}<figcaption>${t}</figcaption></figure>`).join("");

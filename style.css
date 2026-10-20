@@ -113,3 +113,13 @@ footer{background:linear-gradient(120deg,#2a1a3a,#4a2a7a)}
 .agent{border-color:var(--rose)}
 @media (max-width:760px){.hero>div.hero-grid{grid-template-columns:1fr;text-align:center}.hero-text{text-align:center}.hero p{margin-inline:auto}.chars{height:300px}}
 @media (prefers-reduced-motion:reduce){.chars .char{animation:none}}
+
+/* real photos */
+.art img,.gallery img{width:100%;display:block;object-fit:cover;border-radius:16px}
+.art img{aspect-ratio:4/3;object-position:center 60%;margin-bottom:12px}
+.gallery img{aspect-ratio:4/5;border-radius:var(--radius);box-shadow:0 6px 20px -14px #7b4dff88}
+.gallery figure{overflow:hidden}
+img.char{object-fit:cover;border-radius:28px;box-shadow:var(--shadow);border:5px solid #fff;height:auto}
+.chars img.c1{width:46%;aspect-ratio:1/1.15}
+.chars img.c2{width:46%;aspect-ratio:1/1.3}
+.chars img.c3{width:40%;aspect-ratio:1/1.1}
